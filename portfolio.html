@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script src = "js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<link href="css/style.css" rel="stylesheet">
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+
+
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg fixed navbar-light  bg-transparent">
+    <div class="container-fluid px-2 ">
+      <a href="index.html" class="navbar-brand logo-sc">Studio Chintala</a>
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="  collapse navbar-collapse " id="navbarCollapse">
+        <ul class="navbar-nav d-flex  w-50 justify-content-between ms-auto">
+      <li class="nav-item">
+  <a href ="projects.html" class="nav-link">Work</a>
+
+
+  </li>
+  <li class="nav-item">
+    <a href="studio.html" class=" nav-link ">Studio</a>
+  </li>
+  <li class="nav-item">
+    <a href="contact.html" class=" nav-link ">Contact</a>
+   </li>
+      <li class="nav-item">
+        <form class="nav-item nav-link " style="margin-bottom:0px; text-align:right;">	<input type="text" name="keyword" id="myInput" class="flex-item input-sm" placeholder="Search.." onblur="this.placeholder = 'Search" > </form>
+  </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+
+<div class = "buffer" style="height:10px;"></div>
+<div class ="container-fluid slider_container">
+
+  <div class =" prevnext d-flex row justify-content-between align-items-center">
+
+  <div class="prev_button" class="prev" alt="Prev"></div>
+   <div class="next_button" class="next" alt="Next"></div>
+
+    </div>
+
+<div class = "slider-outer ">
+
+  <div class="slider_inner" id="slider_inner">
+
+    <div class ="slide intro_slide animate__animated animate__fadeInLeft active  " id="intro_slide">
+<img src ="img/slide/1.jpeg" />
+    <h6 class="intro_slide_title">Studio Chintala Office
+Bengaluru</h6>
+    <p class="intro_slide_desc">Studio Chintala is a multi-disciplinary design studio based in San Fransico and Bangalore. The studio is focused on designing simple and honest spaces and objects, driven purely by functional requirements. The design process involves challenging preconceived notions about buildings and typologies and starting with a “clean-state”
+       and developing concepts based on logic, context and the aspirations of the users.
+        “Styles and Aesthetics” are purely a consequence of the creative process.</p>
+      <span class="hide_caption">text</span>
+    </div>
+
+
+    <div class ="slide animate__animated ">
+    <img class="" src ="img/slide/1.jpeg" />
+      <span class="hide_caption">office</span>
+    </div>
+
+    <div class ="slide animate__animated " >
+    <img class="" src ="img/slide/2.jpeg" />
+      <span class="hide_caption">blue</span>
+  </div>
+
+    <div class ="slide animate__animated" >
+    <img class="" src ="img/slide/3.jpeg" />
+    <span class="hide_caption">wyello</span>
+  </div>
+
+  <div class ="slide animate__animated">
+    <img  class="" src ="img/slide/4.jpeg" class=""/>
+      <span class="hide_caption">tall</span>
+  </div>
+
+    </div>
+
+
+  </div>
+  </div>
+  <!-- <div class = "buffer" style="height:10px;"></div> -->
+  <div class ="footer_desc">
+    <div class="d-flex"><span class="py-2">Studio Chintala Office, Bengaluru</span><span class="py-2 px-5 slide_number"></span> <span class="py-2 ms-auto fixed_caption"></span></div>
+    </div>
+
+</body>
+
+<style>
+
+
+.hide_caption {
+  display: none;
+}
+
+.footer_desc {
+
+  padding:20px 30px;
+}
+
+
+
+
+  html {
+
+    height:100vh;
+  }
+.prev_button {
+  cursor: url('img/svg/prev.svg'), auto;
+
+}
+.next_button {
+  cursor: url('img/svg/next.svg'), auto;
+
+}
+
+  <!-- .slider_container {
+    height: 80%;
+  } -->
+
+  .slider_inner {
+    position :relative;
+
+    margin:0 auto;
+    height:100%;
+
+  }
+
+  .prevnext {
+    position:absolute;
+    height:70%;
+    width:100%;
+
+  }
+
+  .slide{
+
+height:100%;
+  max-width:100%;
+  display:none;
+
+  margin: 0 auto;
+
+ position:relative;
+
+
+ transition-property: opacity;
+ transition-duration: 4s;
+ transition-delay: 2s;
+  transition-timing-function: ease-in;
+
+
+  }
+
+  .slide img{
+
+position:relative;
+margin:0 auto;
+width:100%;
+display:block;
+  }
+
+.intro_slide_title, .intro_slide_desc {
+  color:white;
+}
+
+.intro_slide {
+  padding:2%;
+  width:40%;
+  margin: 0 0;
+}
+
+
+
+  .slide.active {
+
+
+  display:block;
+
+  }
+
+  .prev_button, .next_button {
+    float:left;
+      }
+
+      .prev_button {
+
+        z-index:100;
+        height:80%;
+        width:30%;
+        background-color: rgba(0,0,0,0);
+      }
+
+      .next_button {
+
+        z-index:100;
+        height:80%;
+        width:30%;
+            background-color: rgba(0,0,0,0);
+      }
+
+  </style>
+
+
+  <script>
+
+
+
+
+
+    let final_image_width;
+
+    $(document).ready(function(){
+
+
+
+  resize_portfolio();
+  copy_caption();
+  total_slides();
+    introslide();
+
+    $('.next_button').on('click', function(){
+
+
+
+
+    var currentSlide =  $('.active');
+    var nextSlide = currentSlide.next();
+
+    // var captiontext = nextcaption.find(".headline").html();
+
+    if(nextSlide.length) {
+
+
+      currentSlide.removeClass('active animate__slideInRight').css({"z-index": -10, "opacity": 0});
+        nextSlide.addClass('active animate__slideInRight').css({"z-index": +10, "opacity": 1});
+    }
+
+    else {
+      currentSlide.removeClass('active').css({"z-index": -10, "opacity": 0});
+      $('.slide').first().addClass('active').css({"z-index": +10, "opacity": 1});
+
+    }
+
+    resize_portfolio();
+    copy_caption();
+    introslide();
+    total_slides();
+
+
+    });
+
+
+    $('.prev_button').on('click', function(){
+
+
+
+    var currentSlide =  $('.active');
+    var prevSlide = currentSlide.prev();
+
+    if(prevSlide.length) {
+
+          // prevSlide.addClass('animate__fadeInLeft');
+      currentSlide.removeClass('active animate__slideInLeft').css({"z-index": -10, "opacity": 0});
+
+        prevSlide.addClass('active animate__slideInLeft').css({"z-index": +10, "opacity": 1});
+        // prevSlide.addClass('animate__fadeInRight');
+
+    }
+
+    else {
+      // currentSlide.removeClass('animate__fadeOutRight');
+      currentSlide.removeClass('animate__fadeInLeft active').css({"z-index": -10, "opacity": 0});
+      $(".slide").last().addClass('animate__fadeInLeft active').css({"z-index": +10, "opacity": 1});
+    }
+
+
+      resize_portfolio();
+      copy_caption();
+        introslide();
+      total_slides();
+    });
+
+
+
+
+  });
+
+  $( window ).resize(function() {
+    resize_portfolio();
+  });
+
+
+    function resize_portfolio () {
+
+
+      var image_width = $(".active img").get(0).naturalWidth;
+        var image_height = $(".active img").get(0).naturalHeight;
+
+
+        var image_h_ratio = image_height / image_width;
+        var image_w_ratio = image_width/ image_height;
+        console.log(image_width);
+        console.log(image_height);
+        console.log('W_ratio ' + image_w_ratio);
+
+      var html_height = $('html').outerHeight();
+      console.log(html_height);
+      var nav_height = $('nav').outerHeight();
+      var footer_height = $('.footer_desc').outerHeight();
+    console.log(nav_height);
+    console.log(footer_height);
+    var slider_container_width = $('.slider_inner').width();
+    var buffer_height = $('.buffer').height();
+    // var image_container_height = $('.active img').height();
+
+
+
+var slider_container_height = html_height - nav_height - footer_height - buffer_height  ;
+var slider_container_height_px =  slider_container_height  + "px";
+
+
+console.log('slider_height' + slider_container_height_px);
+    console.log('slider_container_width - ' + slider_container_width);
+
+  $(".slider_container").css({"height": slider_container_height_px});
+  $(".slider-outer").css({"height": slider_container_height_px});
+  // $(".slider_inner").css({"height": slider_container_height_px});
+  // $(".slide").css({"height": slider_container_height_px});
+    // $(".slide img").css({"height": slider_container_height_px, "opacity": 1});
+
+    var slider_inner_height = $('.slider_inner').height();
+      console.log('slider_inner_height///// ' + slider_inner_height);
+
+    if(image_w_ratio >= 1) {
+      $(".slide img").css({ "top": 0});
+
+  $(".slide img").css({"width": '100%', "height": 'auto'});
+
+
+    var final_image_width = slider_container_height * image_w_ratio;
+
+    console.log('image_container_width - ' + final_image_width);
+
+    if (final_image_width < slider_container_width) {
+        $(".slide img").css({ "top": 0});
+      $(".active img").css({"width": final_image_width + "px"});
+
+    }
+
+    else if (final_image_width >= slider_container_width)
+     {
+var image_container_height = $('.active img').height();
+
+      top_space = (slider_container_height - image_container_height)/2 + 'px';
+      $(".active img").css({ "top": top_space});
+console.log('image_container_height /////' + image_container_height);
+console.log('top space////////' + top_space);
+
+
+        // $(".active").css({"width": final_image_width + "px", "opacity": 1});
+
+
+    }
+
+    }
+
+
+    else if(image_w_ratio < 1) {
+
+  $(".slide img").css({"height": '100%', "width": 'auto'});
+
+    }
+}
+
+
+
+</script>
+
+<script type="text/javascript">
+
+var project_name = '';
+
+    var queryString = new Array();
+    $(function () {
+        if (queryString.length == 0) {
+            if (window.location.search.split('?').length > 1) {
+                var params = window.location.search.split('?')[1].split('&');
+                for (var i = 0; i < params.length; i++) {
+                    var key = params[i].split('=')[0];
+                    var value = decodeURIComponent(params[i].split('=')[1]);
+                    queryString[key] = value;
+                }
+
+
+            }
+
+                console.log("data retrived");
+        }
+        if (queryString["name"] != null && queryString["technology"] != null) {
+            var data = "<u>Values from QueryString</u><br /><br />";
+            data += "<b>Name:</b> " + queryString["name"];
+            $("#lblData").html(data);
+
+        }
+
+
+    });
+
+
+  $(document).ready(function(){
+    var project_name = queryString["name"];
+
+
+$( "#slider_inner" ).load( "test.html #" + project_name );
+
+
+   });
+
+
+   function copy_caption () {
+
+
+
+     var captiontext = $('.active').children('.hide_caption').html();
+     console.log('this is next' + captiontext);
+
+ $('.fixed_caption').text(captiontext);
+
+
+
+
+   };
+
+function total_slides () {
+
+  var slides_count = $(".slider_inner .slide").length;
+console.log('count of slides' + slides_count);
+
+// $('#parent .child').click(function() {
+    var slides_index = $('.slider_inner .active').index();
+    var slides_index = slides_index + 1;
+// });
+console.log('index' + slides_index);
+
+ $('.slide_number').text(slides_index + '/' + slides_count);
+
+
+};
+
+// total_slides();
+
+function introslide () {
+
+if ($( "#intro_slide" ).hasClass( "active" )) {
+  console.log("introslide active");
+
+
+  $('body').css({'background-image' : 'linear-gradient(0deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.6) 100%), url(img/slide/2.jpeg)', 'background-size' : 'cover', 'background-position' : '50% 50%' });
+  $('.navbar-brand, .navbar-light, .navbar-nav, .nav-link').css({'color': 'white'});
+    $(".slide img").css({ "display": 'none'});
+    $(".footer_desc").css({ "display": 'none'});
+
+}
+else {
+  $('body').css({background : 'white'});
+  $('.navbar-brand, .navbar-light, .navbar-nav, .nav-link').css({'color': 'black'});
+  $(".slide img").css({ "display": 'block'});
+  $(".footer_desc").css({ "display": 'block'});
+
+}
+
+};
+
+
+
+
+
+
+</script>
