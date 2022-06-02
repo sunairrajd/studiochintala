@@ -467,7 +467,7 @@ color: transparent;
 
 
   overflow: none;
-  background-color:#ffffff;
+  /* background-color:#ffffff; */
 
 
 
@@ -617,6 +617,15 @@ color:black !important;
 font-size:48px;
 padding:3% !important;
 
+}
+
+.sub-nav {
+  padding:3%;
+  font-size:20px;
+}
+
+.sub-nav-block {
+  margin-bottom: 20px;
 }
       }
 
