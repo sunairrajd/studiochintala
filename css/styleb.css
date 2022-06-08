@@ -7,7 +7,7 @@ html {
   @font-face {
     font-family: "Helvetica";
     src: url("../fonts/Helvetica.woff") format('woff');
-    font-weight: normal;
+    font-weight: 400;
 }
 
 

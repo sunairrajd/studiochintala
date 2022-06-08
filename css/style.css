@@ -3,24 +3,32 @@
 html {
 
   height:100%;
-  }
-  @font-face {
-    font-family: "Helvetica";
-    src: url("../fonts/Helvetica.woff") format('woff');
-    font-weight: normal;
-}
+  animation: fadeIn 1s;
 
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica.woff') format('woff');
+    font-weight: 400;
+  }
 
 @font-face {
-    font-family: "Helvetica";
-    src: url("../fonts/HelveticaMed.woff") format('woff');
+    font-family: 'Helvetica';
+    src: url('../fonts/HelveticaMed.woff') format('woff');
     font-weight: 600;
 }
+
 
 @font-face {
     font-family: "Helvetica";
     src: url("../fonts/Helvetica-Bold.woff") format('woff');
-    font-weight: bold;
+    font-weight: 800;
 }
 
 
@@ -36,8 +44,9 @@ html {
 
 
 .home_quote {
-bottom:0px;
-margin-top:auto;
+top:0px;
+margin-top:8%;
+margin-bottom:auto;
 color:white;
 font-size:20px;
 padding:2%;
@@ -279,7 +288,7 @@ padding-bottom: 100%;
 .filter_list {
   padding-right:20px;
   font-size:16px;
-  color:#BABBBE;
+color: rgba(0,0,0,.45);
   text-decoration: none;
 }
 
@@ -455,9 +464,9 @@ color: transparent;
 }
 
 
-/* .nav-link {
-color:rgba(0,0,0,.55) !important;
-} */
+.nav-link {
+color:rgba(0,0,0,.55) ;
+}
 
 
 .mysqr {
@@ -657,7 +666,7 @@ z-index: 5000;
 }
 
 .nav-item,  .nav-link {
-color:black !important;
+
 font-size:48px;
 padding:3% !important;
 
@@ -679,18 +688,35 @@ padding:3% !important;
 
 
               @media screen and (min-device-width: 992px) {
+                .navbar-projects {
+                height:180px;
+              }
 
-                .navbar-nav {
-                  width:50% !important;
+.sub-nav {
+  line-height:1.1;
+}
 
+.navbar-process {
+  height:100px;
+}
 
+              .filters_list {
+                margin-top:-10px;
+              }
+
+                 .nav-item {
+                  padding-left: 50px;
                 }
+
+                /* .navbar-nav {
+                  width:50% !important;
+                } */
 
               .bottom_nav {
         display:none;
       }
       .context {
-        margin-top:80px !important;
+        margin-top:20px !important;
       }
 
 
