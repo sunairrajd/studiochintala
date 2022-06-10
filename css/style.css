@@ -3,7 +3,12 @@
 html {
 
   height:100%;
+
+}
+
+body, .search_bar {
   animation: fadeIn 1s;
+
 
   }
 
@@ -123,6 +128,7 @@ td.archive_col {
 .address_desc {
   font-size: 14px;
   color: #2E2F32;
+  line-height: 1.3;
 }
 
 .address_head {
@@ -211,9 +217,15 @@ transition : opacity 1s ease-in-out !important;
 }
 
 td {
-  color: #BABBBE;
+  color: rgba(0,0,0,.45);
   border-bottom-width:0px !important;
   border-top: 1px solid #C4C4C4;
+  vertical-align: top;
+  vertical-align: top;
+}
+
+tr {
+  vertical-align: top;
 }
 
 .archive_photos td {
@@ -233,8 +245,8 @@ tbody {
   border-top:0px !important;
 }
 
-tr:hover td {
-  color: #EC018C;
+tr:hover td  {
+  color: rgba(0,0,0,.9);
 }
 
 
@@ -245,7 +257,7 @@ border: 1px solid black;
 */
 
 .tablesorter-header-inner {
-  color: #74767C;
+  color: rgba(0,0,0,.45);
   font-weight:normal !important;
 
 }
@@ -256,7 +268,7 @@ color: #2E2F32 !important;
 
 .tablesorter-header-inner:hover {
 
-    color: #EC018C;
+    color:  rgba(0,0,0,.9);
 }
 
 .nav-item {
@@ -269,8 +281,9 @@ color: #2E2F32 !important;
 position:absolute;
 padding-top:10px;
 line-height: 1.2;
-font-size: 12px;
-color: #2E2F32;
+font-size: 13px;
+/* color: #2E2F32; */
+color:  rgba(0,0,0,.9);
 
 
 opacity: 0;
@@ -287,13 +300,19 @@ padding-bottom: 100%;
 
 .filter_list {
   padding-right:20px;
-  font-size:16px;
+  font-size:14px;
 color: rgba(0,0,0,.45);
   text-decoration: none;
 }
 
+.nav-link {
+
+  font-size:14px;
+}
+
 .filter_list:focus, .filter_list:hover {
-color:#EC018C !important;
+/* color:#EC018C !important; */
+color:rgba(0,0,0,.9) !important;
 }
 
 .active {
@@ -315,7 +334,7 @@ transition: opacity 0.9s;
 }
 
 .strong {
-font-size: 12px;
+font-size: 13px;
 }
 
 .mysqr {
@@ -602,7 +621,7 @@ td:nth-child(1) {
 width:5%;
  }
  td:nth-child(2) {
- width:20%;
+ width:30%;
   }
   td:nth-child(3) {
   width:5%;
@@ -614,14 +633,12 @@ width:5%;
     width:15%;
      }
      td:nth-child(6) {
-     width:10%;
+     width:15%;
       }
       td:nth-child(7) {
-      width:15%;
+      width:10%;
        }
-       td:nth-child(8) {
-       width:10%;
-        }
+
 
 
         .archive_photos td:nth-child(1) {
@@ -689,11 +706,11 @@ padding:3% !important;
 
               @media screen and (min-device-width: 992px) {
                 .navbar-projects {
-                height:180px;
+                height:185px;
               }
 
 .sub-nav {
-  line-height:1.1;
+  line-height:1.3;
 }
 
 .navbar-process {

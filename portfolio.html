@@ -20,8 +20,45 @@
 
 <body>
 
+  <nav class="navbar navbar-expand-lg sticky-top navbar-light  bg-transparent align-items-start  " style="">
+    <div class="container-fluid px-2 ">
+      <a href="index.html" class="navbar-brand logo-sc">Studio Chintala</a>
+      <div class="search_mobile_wrapper py-3 px-2" style="margin-bottom:0px; display:none; text-align:left; position:fixed; top:0px; left:0px; background-color:white; width:100%; z-index:5000;">
+          <form class="search_mobile " >	<input type="text" name="keywordmobile" id="myInput_mobile" class="flex-item input-sm" placeholder="Search here" onblur="this.placeholder = 'Search" style=" width:100%;" > <button id="clearbutton" class="clearbutton" type="button" value="close" onclick="this.form.reset();  mysearch(); myunmark(); $('.clearbutton').hide(); " style="border:0px; width:100%;">  <span id="bb_m" > clear</span></form>
+  </div>
 
-  <nav class="navbar navbar-expand-lg fixed navbar-light  bg-transparent">
+
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="  collapse navbar-collapse " id="navbarCollapse">
+        <ul class="navbar-nav d-flex  justify-content-between ms-auto">
+      <li class="nav-item">
+<a href ="projects.html" class="nav-link ">Work</a>
+</li>
+ <li class="nav-item">
+    <a href="process.html" class=" nav-link ">Studio</a>
+  </li>
+
+  <li class="nav-item">
+    <a href="contact.html" class=" nav-link  " style="">Contact</a>
+   </li>
+
+
+      <li class="nav-item">
+          <a class="nav-link	search_b_big text-white" id="search_b" style="opacity: 0;">Search</a>
+</li>
+
+        </ul>
+
+      </div>
+
+</div>
+
+  </nav>
+
+
+  <!-- <nav class="navbar navbar-expand-lg fixed navbar-light  bg-transparent">
     <div class="container-fluid px-2 ">
       <a href="index.html" class="navbar-brand logo-sc">Studio Chintala</a>
       <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -47,7 +84,7 @@
 
       </div>
     </div>
-  </nav>
+  </nav> -->
 
 
 
@@ -113,6 +150,8 @@ Bengaluru</h6>
 .desc_outer {
   padding-left:8px;
   padding-right:8px;
+  font-size: 14px;
+  color:rgba(0,0,0,0.9);
 }
 
 .slider_container {
@@ -132,7 +171,7 @@ Bengaluru</h6>
 
 .footer_desc {
 
-  padding:20px 2%;
+  padding:20px 2% 30px 2%;
 }
 
 
@@ -199,11 +238,13 @@ display:block;
 
 .intro_slide_title, .intro_slide_desc {
   color:white;
+  font-size:14px;
 }
 
 .intro_slide {
-  padding:2%;
-  width:40%;
+  padding-top:3%;
+  padding-bottom:3%;
+  width:30%;
   margin: 0 0;
 }
 
@@ -504,7 +545,7 @@ if ($( "#intro_slide" ).hasClass( "active" )) {
 }
 else {
   $('body').css({background : 'white'});
-  $('.navbar-brand, .navbar-light, .navbar-nav, .nav-link').css({'color': 'black'});
+  $('.navbar-brand, .navbar-light, .navbar-nav, .nav-link').css({'color': 'rgba(0,0,0,0.9)'});
   $(".slide img").css({ "display": 'block'});
   $(".footer_desc").css({ "display": 'block'});
 
