@@ -20,3 +20,8 @@ console.log(viewportWidth)
 //     }
 //  });
 // });
+
+
+$(".sub-nav").on("click", function() {
+  $("html").animate({ scrollTop: 0 }, "slow");
+});

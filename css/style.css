@@ -53,11 +53,26 @@ top:0px;
 margin-top:8%;
 margin-bottom:auto;
 color:white;
-font-size:20px;
+font-size:16px;
 padding:2%;
+font-family: "Helvetica";
 
 
+}
 
+.home_link{
+
+color:white;
+font-size:16px;
+font-family: "Helvetica";
+text-underline-offset: 0.3rem;
+}
+
+.home_link:hover{
+
+color:white;
+font-size:16px;
+font-family: "Helvetica";
 }
 
 
@@ -543,7 +558,16 @@ nav  {
 }
 
 .navbar-brand {
-  font-size:22px;
+  font-size:20px;
+}
+
+
+#mute:hover {
+  opacity:0.8;
+}
+
+.sub-nav {
+  cursor: pointer;
 }
 
 /* .mysqr {
