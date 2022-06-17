@@ -656,6 +656,22 @@ $(".content").css('display','none');
 });
 
 
+$('.diwakar_click').on('click', function(){
+
+$("#diwakar_page").load("./diwakarpage.html");
+
+$(".diwakar_page").css('display','block');
+
+});
+
+$('.close_diwakar').on('click', function(){
+
+$(".diwakar_page").css('display','none');
+  console.log("working");
+
+});
+
+
 //JS script
 
 
@@ -673,20 +689,7 @@ $(".content").css('display','none');
 // });
                                         </script>
 
-                                        $('.diwakar_click').on('click', function(){
 
-                                        $("#diwakar_page").load("./diwakarpage.html");
-
-                                        $(".diwakar_page").css('display','block');
-
-                                        });
-
-                                        $('.close_diwakar').on('click', function(){
-
-                                        $(".diwakar_page").css('display','none');
-                                          console.log("working");
-
-                                        });
 
 
                                                 </script>
