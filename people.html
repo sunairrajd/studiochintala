@@ -1,9 +1,7 @@
-
+<!DOCTYPE html>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.slim.js"
-integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
-crossorigin="anonymous"></script>
+<script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   crossorigin="anonymous"></script>
 <script src = "js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -11,7 +9,15 @@ crossorigin="anonymous"></script>
 <link href="css/style.css" rel="stylesheet">
 <div id="overlay"  ></div>
 
+
+ <title>Studio Chintala | People</title>
   <body>
+
+    <div class="diwakar_page"  id="diwakar_page" style="width:100%; height:100vh; background-color:pink; display:none; position:fixed; z-index:50000;">
+
+      <!-- <iframe class="iframe_d" style=" width:100%;  height:100%;" src="./diwakarpage.html" name="targetframe"  allow="fullscreen" allowTransparency="true" scrolling="yes" frameborder="0" >
+      </iframe> -->
+    </div>
 
 
     <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white  align-items-start navbar-process " style="">
@@ -105,9 +111,9 @@ crossorigin="anonymous"></script>
 
 
               <div class="people_sqr " >
-                <img width = "210"   class="people_img" src="img/people/4.png" alt="Veena" data-title="Veena" data-role = "Project Architect"/>
+                <img width = "210"   class="people_img diwakar_click" src="img/people/4.png" alt="Veena" data-title="Veena" data-role = "Project Architect"/>
 
-                <div class="content p-3">
+                <!-- <div class="content p-3">
                   <div class="close-btn">close</div>
                 <h6 class="text-left people_name_box">Diwakar Chintala</h6>
                 <p class="people_desc_box">
@@ -118,7 +124,7 @@ crossorigin="anonymous"></script>
                 <div class="people_social_box">
                   <a href="www.linkedin.com">LinkedIn</a>
                 </div>
-                  </div>
+                  </div> -->
                   <div class="people_name">Diwakar Chintala<span></div><div class="people_name_title">Project Architect</span></div>
                 </div>
 
@@ -644,6 +650,29 @@ $(".content").css('display','none');
    $('.people_sqr').css("z-index",0);
 
 });
+
+
+//JS script
+$('.diwakar_click').on('click', function(){
+
+$("#diwakar_page").load("http://www.somesite.com/somepage.html");
+
+$(".diwakar_page").css('display','block');
+
+});
+
+// $('.close_diwakar').on('click', function(){
+//
+// $(".diwakar_page").css('display','none');
+//   console.log("working");
+//
+// });
+//
+//
+// var iframe = $('.iframe_d').contents();
+// iframe.find(".close_diwakar").click(function(){
+//    alert("test");
+// });
                                         </script>
 
                                                 </script>
