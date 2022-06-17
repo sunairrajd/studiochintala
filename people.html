@@ -13,7 +13,7 @@
  <title>Studio Chintala | People</title>
   <body>
 
-    <div class="diwakar_page"  id="diwakar_page" style="width:100%; height:100vh; background-color:; display:none; position:fixed; z-index:50000;">
+    <div class="diwakar_page"  id="diwakar_page" style="width:100%; height:100vh; background-color: white; display:none; position:fixed; z-index:50000;">
 
       <!-- <iframe class="iframe_d" style=" width:100%;  height:100%;" src="./diwakarpage.html" name="targetframe"  allow="fullscreen" allowTransparency="true" scrolling="yes" frameborder="0" >
       </iframe> -->
@@ -531,6 +531,24 @@ display: none;
                                                   }
 
                                                   $(document).ready(function(){
+
+                                                    $('.diwakar_click').on('click', function(){
+
+                                                    $("#diwakar_page").load("./diwakarpage.html");
+
+                                                    $(".diwakar_page").css('display','block');
+
+                                                    });
+
+                                                    $('.close_diwakar').on('click', function(){
+
+                                                    $(".diwakar_page").css('display','none');
+                                                      console.log("working");
+
+                                                    });
+
+
+
                                                         restructure();
                                                           $(window).on('resize', restructure);
                                                       });
@@ -653,20 +671,7 @@ $(".content").css('display','none');
 
 
 //JS script
-$('.diwakar_click').on('click', function(){
 
-$("#diwakar_page").load("./diwakarpage.html");
-
-$(".diwakar_page").css('display','block');
-
-});
-
-$('.close_diwakar').on('click', function(){
-
-$(".diwakar_page").css('display','none');
-  console.log("working");
-
-});
 
 // $('.close_diwakar').on('click', function(){
 //
