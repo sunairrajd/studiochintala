@@ -218,6 +218,8 @@ Bengaluru</h6>
 
     height:100vh;
   }
+
+
 .prev_button {
   cursor: url('img/svg/prev.svg'), auto;
 
@@ -282,6 +284,29 @@ display:block;
 .intro_slide_title {
   font-family: 'Helvetica';
   font-weight: 800;
+}
+
+
+
+@media screen and (min-device-width: 992px) {
+
+
+
+  html {
+
+    height:100vh;
+  }
+}
+
+
+@media screen and (max-device-width: 991px) {
+
+
+
+  html {
+    height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+ height: calc(var(--vh, 1vh) * 100);
+  }
 }
 
 
@@ -646,6 +671,11 @@ else {
 };
 
 
+
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
 
