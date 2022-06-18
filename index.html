@@ -30,7 +30,7 @@ crossorigin="anonymous"></script>
       <div class="  collapse navbar-collapse " id="navbarCollapse">
         <ul class="navbar-nav d-flex  justify-content-between ms-auto">
       <li class="nav-item">
-<a href ="projects.html" class=" nav-link text-white ">Work</a>
+<a href ="projects.html" class=" nav-link ">Work</a>
 
 <div class="d-none d-lg-flex flex-column bg-white px-2 filters_list" style="position:absolute;">
 
@@ -39,7 +39,7 @@ crossorigin="anonymous"></script>
 </div>
 </li>
  <li class="nav-item">
-    <a href="process.html" class=" nav-link active text-white">Studio</a>
+    <a href="process.html" class=" nav-link active ">Studio</a>
 
     <div class="d-none d-lg-flex flex-column  px-2 filters_list" style="position:absolute;">
 
@@ -47,10 +47,10 @@ crossorigin="anonymous"></script>
 
   </li>
   <li class="nav-item">
-    <a href="contact.html" class=" nav-link text-white">Contact</a>
+    <a href="contact.html" class=" nav-link ">Contact</a>
    </li>
       <li class="nav-item">
-          <a class="nav-link	search_b_big text-white" style="opacity:0" id="search_b" >Search</a>
+          <a class="nav-link	search_b_big " style="opacity:0" id="search_b" >Search</a>
 </li>
 
         </ul>
@@ -125,7 +125,39 @@ overflow:hidden;
     filter: contrast(120%) saturate(120%) brightness(90%) grayscale(40%);
 
 
+
 }
+
+
+@media screen and (min-device-width: 992px) {
+
+.nav-link {
+
+  color:white !important;
+}
+
+}
+
+@media screen and (max-device-width: 991px) {
+
+.nav-link {
+
+  color:rgba(0,0,0,0.9) !important;
+}
+
+.navbar-toggler, .navbar-toggler-icon
+{
+border-color: #ffffff !important;
+color: #ffffff !important;
+}
+
+.navbar-toggler[aria-expanded="true"], .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon
+{
+border-color: rgba(0,0,0,.9) !important;
+}
+
+}
+
 
 
     </style>

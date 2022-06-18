@@ -4,6 +4,21 @@ html {
 
   height:100%;
 
+
+
+}
+
+a{
+
+}
+
+
+.slide::after {
+
+  content:"X";
+  position: absolute;
+  top:0px;
+  right:0px;
 }
 
 body, .search_bar {
@@ -334,11 +349,18 @@ color:rgba(0,0,0,.9) !important;
 color: #2E2F32;
 }
 
+.projecta, .projectb {
+
+  cursor:pointer;
+
+}
+
 .mysqr:hover .project_name {
 
   opacity: 1;
-  transition: opacity 0.3s;
- -webkit-transition: opacity 0.3s;
+
+ transition : opacity 0.8s ease-in-out !important;
+   -webkit-transition : opacity 0.8s ease-in-out !important;
 }
 
 .mysqr:hover img{
@@ -354,7 +376,9 @@ font-size: 13px;
 
 .mysqr {
   overflow: hidden;
+
 }
+
 
 .highlight {
   background-color: yellow;
@@ -696,7 +720,7 @@ z-index:500;
 
 .navbar-brand {
 z-index: 5000;
-  transition: .5s ease;
+
 
 }
 
@@ -742,7 +766,7 @@ padding:3% !important;
 }
 
               .filters_list {
-                margin-top:-10px;
+                margin-top:-9px;
               }
 
                  .nav-item {
