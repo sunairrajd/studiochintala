@@ -176,7 +176,12 @@ border-color: rgba(0,0,0,.9) !important;
     </style>
     <script>
     $('#playvideo').click(function(){
+
       $('#video_sc').play();
+      $('#video_sc').get(0).play()
+
+$('#video_sc').trigger('play');
+      $('#playvideo').css({"opacity":"0"});
           });
 
           </script>
