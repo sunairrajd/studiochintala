@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+ <title>Studio Chintala | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script src = "js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+<link href="css/style.css" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+
+<body class=" animate__animated">
+
+    <div class="nav_overlay"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-light  bg-transparent align-items-start  " style="">
+    <div class="container-fluid px-2 ">
+      <a href="index.html" class="navbar-brand logo-sc">Studio Chintala</a>
+      <div class="search_mobile_wrapper py-3 px-2" style="margin-bottom:0px; display:none; text-align:left; position:fixed; top:0px; left:0px; background-color:white; width:100%; z-index:5000;">
+          <form class="search_mobile " >	<input type="text" name="keywordmobile" id="myInput_mobile" class="flex-item input-sm" placeholder="Search here" onblur="this.placeholder = 'Search" style=" width:100%;" > <button id="clearbutton" class="clearbutton" type="button" value="close" onclick="this.form.reset();  mysearch(); myunmark(); $('.clearbutton').hide(); " style="border:0px; width:100%;">  <span id="bb_m" > clear</span></form>
+  </div>
+
+
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+
+                    <div class="btn-line"></div>
+                      <div class="btn-line"></div>
+                      <div class="btn-line"></div>
+
+      </button>
+      <div class="  collapse navbar-collapse " id="navbarCollapse">
+        <ul class="navbar-nav d-flex  justify-content-between ms-auto">
+      <li class="nav-item">
+<a href ="projects.html" class="nav-link ">Work</a>
+</li>
+ <li class="nav-item">
+    <a href="process.html" class=" nav-link ">Studio</a>
+  </li>
+
+  <li class="nav-item">
+    <a href="contact.html" class=" nav-link  " style="">Contact</a>
+   </li>
+
+
+      <li class="nav-item">
+          <a class="nav-link	search_b_big " id="search_b" style="">Search</a>
+</li>
+
+        </ul>
+
+      </div>
+
+</div>
+
+  </nav>
+
+
+  <!-- <nav class="navbar navbar-expand-lg fixed navbar-light  bg-transparent">
+    <div class="container-fluid px-2 ">
+      <a href="index.html" class="navbar-brand logo-sc">Studio Chintala</a>
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="  collapse navbar-collapse " id="navbarCollapse">
+        <ul class="navbar-nav d-flex  w-50 justify-content-between ms-auto">
+      <li class="nav-item">
+  <a href ="projects.html" class="nav-link">Work</a>
+
+
+  </li>
+  <li class="nav-item">
+    <a href="studio.html" class=" nav-link ">Studio</a>
+  </li>
+  <li class="nav-item">
+    <a href="contact.html" class=" nav-link ">Contact</a>
+   </li>
+      <li class="nav-item">
+        <form class="nav-item nav-link " style="margin-bottom:0px; text-align:right;">	<input type="text" name="keyword" id="myInput" class="flex-item input-sm" placeholder="Search.." onblur="this.placeholder = 'Search" > </form>
+  </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav> -->
+
+
+
+<div class = "buffer" style="height:10px;"></div>
+<div class ="container-fluid slider_container">
+
+  <div class =" prevnext mx-0 d-flex row justify-content-between align-items-center">
+
+  <div class="prev_button" class="prev" alt="Prev"></div>
+   <div class="next_button" class="next" alt="Next"></div>
+
+    </div>
+
+<div class = "slider-outer ">
+  <a href="projects.html" class="back_button" style=" font-size:14px; text-decoration: none; color:black; position:absolute; right:0px; padding-right:2%; padding-left:2%; ">X</a>
+
+  <div class="slider_inner" id="slider_inner">
+
+    <div class ="slide  animate__animated intro_slide active  " id="intro_slide">
+<img src ="img/slide/1.jpeg" />
+
+
+    <h6 class="intro_slide_title">Apple service center
+Bengaluru</h6>
+    <p class="intro_slide_desc">Studio Chintala is a multi-disciplinary design studio based in San Fransico and Bangalore. The studio is focused on designing simple and honest spaces and objects, driven purely by functional requirements. The design process involves challenging preconceived notions about buildings and typologies and starting with a “clean-state”
+       and developing concepts based on logic, context and the aspirations of the users.
+        “Styles and Aesthetics” are purely a consequence of the creative process.</p>
+        <!-- <a class="view_proj" style="text-decoration:underline; color:white; font-size:13px;">View project</a> -->
+      <span class="hide_caption">text</span>
+
+
+    </div>
+
+
+
+    <div class ="slide  animate__animated">
+    <img class="" src ="img/proj/apple/2.jpg" />
+      <span class="hide_caption">office</span>
+    </div>
+
+    <div class ="slide  animate__animated">
+    <img class="" src ="img/proj/apple/3.jpg" />
+      <span class="hide_caption">office</span>
+    </div>
+
+    <div class ="slide  animate__animated">
+    <img class="" src ="img/proj/apple/4.jpg" />
+      <span class="hide_caption">office</span>
+    </div>
+    <div class ="slide  animate__animated">
+    <img class="" src ="img/proj/apple/5.jpg" />
+      <span class="hide_caption">office</span>
+    </div>
+    <div class ="slide  animate__animated">
+    <img class="" src ="img/proj/apple/6.jpg" />
+      <span class="hide_caption">office</span>
+    </div>
+    <div class ="slide  animate__animated">
+    <img class="" src ="img/proj/apple/7.jpg" />
+      <span class="hide_caption">office</span>
+    </div>
+    <div class ="slide  animate__animated">
+    <img class="" src ="img/proj/apple/8.jpg" />
+      <span class="hide_caption">office</span>
+    </div>
+
+    <div class ="slide  animate__animated">
+    <img class="" src ="img/proj/apple/9.jpg" />
+      <span class="hide_caption">office</span>
+    </div>
+    <div class ="slide  animate__animated">
+    <img class="" src ="img/proj/apple/10.jpg" />
+      <span class="hide_caption">office</span>
+    </div>
+
+    <div class ="slide  animate__animated">
+    <img class="" src ="img/proj/apple/11.jpg" />
+      <span class="hide_caption">office</span>
+    </div>
+    <div class ="slide  animate__animated">
+    <img class="" src ="img/proj/apple/12.jpg" />
+      <span class="hide_caption">office</span>
+    </div>
+    <div class ="slide  animate__animated">
+    <img class="" src ="img/proj/apple/13.jpg" />
+      <span class="hide_caption">office</span>
+    </div>
+
+    </div>
+
+
+
+  </div>
+  </div>
+  <!-- <div class = "buffer" style="height:10px;"></div> -->
+  <div class ="footer_desc">
+    <div class="d-flex desc_outer">
+      <!-- <a href="./projects.html" class="py-2" style="vertical-align:center; color:rgba(0,0,0,0.9);">
+      <i class=" bi bi-arrow-left" style="font-size:20px; line-height:21px; font-weight:bold; margin-top:-1px;"></i></a> -->
+
+      <span class="py-2 pe-2 pe-md-4">Apple Service Center, Bengaluru</span> <span class="py-2 px-2 px-md-4 slide_number"></span>
+      <div class="prevnext_footer py-2 ">
+    <span class="   prev_footer px-2 px-md-4">  <i class=" px-1 bi bi-arrow-left  " style=""></i>Previous</span>
+    <span class="  next_footer px-2 px-md-4">Next<i class=" px-1 bi bi-arrow-right" style=""></i> </span>
+</div>
+<div class="break-column"></div>
+      <span class="py-2 ms-auto fixed_caption"></span></div>
+
+    </div>
+
+</body>
+
+<style>
+
+
+
+
+
+.prevnext_footer {
+  cursor:pointer;
+  font-size:14px;
+  line-height:21px;
+   font-weight:400;
+    margin-top:-1px;
+    color:rgba(0,0,0,0.45);
+
+}
+
+.prev_footer:hover, .next_footer:hover {
+  color:rgba(0,0,0,0.9);
+  text-decoration: none;
+}
+.desc_outer {
+  padding-left:8px;
+  padding-right:8px;
+  font-size: 14px;
+  color:rgba(0,0,0,0.9);
+}
+
+.slider_container {
+  padding-left:2%;
+  padding-right:2%;
+}
+
+.slider-outer {
+  padding-left:8px;
+  padding-right:8px;
+}
+
+.fixed-caption {
+text-align:right;
+}
+.hide_caption {
+  display: none;
+}
+
+.footer_desc {
+
+  padding:20px 2% 30px 2%;
+}
+
+
+
+
+  html {
+
+    height:100vh;
+  }
+
+
+.prev_button {
+  cursor: url('img/svg/prev.svg'), auto;
+
+}
+.next_button {
+  cursor: url('img/svg/next.svg'), auto;
+
+}
+
+  <!-- .slider_container {
+    height: 80%;
+  } -->
+
+  .slider_inner {
+    position :relative;
+
+    margin:0 auto;
+    height:100%;
+
+  }
+
+  .prevnext {
+    position:absolute;
+    height:70%;
+    width:100%;
+    left:0px;
+
+  }
+
+  .slide{
+
+height:100%;
+  max-width:100%;
+  opacity:0;
+  /* display:block; */
+
+  margin: 0 auto;
+
+ /* position:relative; */
+ position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+
+
+ /* transition-property: opacity;
+ transition-duration: 4s;
+ transition-delay: 2s;
+  transition-timing-function: ease-in; */
+
+
+  }
+
+  .slide.active  {
+
+    opacity:1;
+
+  }
+
+  .slide img{
+
+position:relative;
+margin:0 auto;
+width:100%;
+
+
+  }
+
+.intro_slide_title, .intro_slide_desc {
+  color:white;
+  font-size:14px;
+}
+
+.intro_slide_title {
+  font-family: 'Helvetica';
+  font-weight: 800;
+}
+
+
+
+@media screen and (min-device-width: 992px) {
+
+
+
+  html {
+
+    height:100vh;
+  }
+}
+
+
+@media screen and (max-device-width: 991px) {
+
+
+
+  html {
+    height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+ height: calc(var(--vh, 1vh) * 100);
+  }
+}
+
+
+
+
+@media screen and (min-device-width: 576px) {
+
+
+  .intro_slide {
+    padding-top:3%;
+    padding-bottom:3%;
+    width:30%;
+    margin: 0 0;
+  }
+
+
+}
+
+
+@media screen and (max-device-width: 575px) {
+
+
+  .intro_slide {
+    padding-top:3%;
+    padding-bottom:3%;
+    width:100%;
+    margin: 0 0;
+  }
+
+  .prev_footer, .next_footer  {
+    display: none;
+  }
+}
+
+
+
+
+  .slide.active {
+
+    /* transition : opacity 6s ease-in !important;
+      -webkit-transition : opacity 6s ease-in !important; */
+  display:block;
+
+  }
+
+  .prev_button, .next_button {
+    float:left;
+      }
+
+      .prev_button {
+
+        z-index:100;
+        height:80%;
+        width:40%;
+        background-color: rgba(0,0,0,0);
+      }
+
+      .next_button {
+
+        z-index:100;
+        height:80%;
+        width:40%;
+            background-color: rgba(0,0,0,0);
+      }
+
+  </style>
+
+
+  <script>
+
+
+
+
+
+    let final_image_width;
+
+    $(document).ready(function(){
+
+
+
+  resize_portfolio();
+  copy_caption();
+  total_slides();
+    introslide();
+
+    $('.next_button, .next_footer, .view_proj').on('click', function(){
+
+
+
+
+    var currentSlide =  $('.active');
+    var nextSlide = currentSlide.next();
+
+
+//     if(nextSlide.length) {
+//
+// currentSlide.addClass('animate__fadeOut');
+//             currentSlide.removeClass('active animate__fadeIn').css({"z-index": -10, "display":"none"});
+//
+//               nextSlide.removeClass('animate__fadeOut');
+//               nextSlide.addClass('active animate__fadeIn').css({"z-index": +10, "display":"block"});
+//     }
+//     else {
+//       currentSlide.removeClass('active animate__fadeOut').css({"z-index": -10, "display":"none"});
+//       $('.slide').first().addClass('active animate__fadeIn').css({"z-index": +10,"display":"block"});
+//     }
+
+
+    if(nextSlide.length) {
+
+currentSlide.addClass('animate__fadeOut');
+            currentSlide.removeClass('active animate__fadeIn').css({"z-index": -10, "opacity":"0"});
+
+              nextSlide.removeClass('animate__fadeOut');
+              nextSlide.addClass('active animate__fadeIn').css({"z-index": +10, "opacity":"1"});
+    }
+    else {
+      currentSlide.addClass('animate__fadeOut');
+      currentSlide.removeClass('active animate__fadeIn').css({"z-index": -10, "opacity":"0"});
+      $('.slide').first().removeClass('animate__fadeOut');
+      $('.slide').first().addClass('active animate__fadeIn').css({"z-index": +10,"opacity":"1"});
+    }
+
+    resize_portfolio();
+    copy_caption();
+    introslide();
+    total_slides();
+
+
+    });
+
+
+    $('.prev_button, .prev_footer').on('click', function prevb(){
+
+
+
+    var currentSlide =  $('.active');
+    var prevSlide = currentSlide.prev();
+
+    if(prevSlide.length) {
+
+          // prevSlide.addClass('animate__fadeInLeft');
+            currentSlide.addClass('animate__fadeOut');
+      currentSlide.removeClass('active animate__fadeIn').css({"z-index": -10, "opacity":"0"});
+    prevSlide.removeClass('animate__fadeOut');
+        prevSlide.addClass('active  animate__fadeIn').css({"z-index": +10, "opacity":"1" });
+        // prevSlide.addClass('animate__fadeInRight');
+
+    }
+
+    else {
+      // currentSlide.removeClass('animate__fadeOutRight');
+        currentSlide.addClass('animate__fadeOut');
+      currentSlide.removeClass('active animate__fadeIn').css({"z-index": -10, "opacity":"0"});
+        $('.slide').last().removeClass('animate__fadeOut');
+      $(".slide").last().addClass(' active animate__fadeIn').css({"z-index": +10, "opacity":"1"});
+    }
+
+
+      resize_portfolio();
+      copy_caption();
+        introslide();
+      total_slides();
+    });
+
+
+
+
+  });
+
+  $( window ).resize(function() {
+    resize_portfolio();
+  });
+
+
+    function resize_portfolio () {
+
+
+      var image_width = $(".active img").get(0).naturalWidth;
+        var image_height = $(".active img").get(0).naturalHeight;
+
+
+        var image_h_ratio = image_height / image_width;
+        var image_w_ratio = image_width/ image_height;
+        console.log(image_width);
+        console.log(image_height);
+        console.log('W_ratio ' + image_w_ratio);
+
+      var html_height = $('html').outerHeight();
+      console.log(html_height);
+      var nav_height = $('nav').outerHeight();
+      var footer_height = $('.footer_desc').outerHeight();
+    console.log(nav_height);
+    console.log(footer_height);
+    var slider_container_width = $('.slider_inner').width();
+    var buffer_height = $('.buffer').height();
+    // var image_container_height = $('.active img').height();
+
+
+
+var slider_container_height = html_height - nav_height - footer_height - buffer_height  ;
+var slider_container_height_px =  slider_container_height  + "px";
+
+ var expected_image_width_in_p = image_w_ratio * slider_container_height;
+
+console.log('slider_height' + slider_container_height_px);
+    console.log('slider_container_width - ' + slider_container_width);
+
+  $(".slider_container").css({"height": slider_container_height_px});
+  $(".slider-outer").css({"height": slider_container_height_px});
+  // $(".slider_inner").css({"height": slider_container_height_px});
+  // $(".slide").css({"height": slider_container_height_px});
+    // $(".slide img").css({"height": slider_container_height_px, "opacity": 1});
+
+    var slider_inner_height = $('.slider_inner').height();
+      console.log('slider_inner_height///// ' + slider_inner_height);
+
+    if(image_w_ratio >= 1) {
+      //landscape
+      $(".slide.active img").css({ "top": 0});
+
+  $(".slide.active img").css({"width": '100%', "height": 'auto'});
+
+
+    var final_image_width = slider_container_height * image_w_ratio;
+
+    console.log('image_container_width - ' + final_image_width);
+
+    if (final_image_width < slider_container_width) {
+        $(".slide.active img").css({ "top": 0});
+      $(".active img").css({"width": final_image_width + "px"});
+
+    }
+
+    else if (final_image_width >= slider_container_width)
+     {
+var image_container_height = $('.active img').height();
+
+      top_space = (slider_container_height - image_container_height)/2 + 'px';
+      $(".active img").css({ "top": top_space});
+console.log('image_container_height /////' + image_container_height);
+console.log('top space////////' + top_space);
+
+
+        // $(".active").css({"width": final_image_width + "px", "opacity": 1});
+
+
+    }
+
+  }
+
+
+
+
+
+
+    else if(image_w_ratio < 1  && slider_container_width <= expected_image_width_in_p )  {
+
+
+      //portrait
+      var image_container_height = $('.active img').height();
+      top_space = (slider_container_height - image_container_height)/2 + 'px';
+      $(".active img").css({ "top": top_space});
+      console.log('image_container_height /////' + image_container_height);
+      console.log('top space////////' + top_space);
+
+    $(".slide.active img").css({"height": 'auto', "width": '100%'});
+  console.log("bahar nkal rha h");
+
+    }
+
+    else if(image_w_ratio < 1  && slider_container_width >= expected_image_width_in_p) {
+      //portrait
+
+  $(".slide.active img").css({"height": '100%', "width": 'auto'});
+    console.log("andhar h");
+
+    }
+}
+
+
+
+</script>
+<!--
+<script type="text/javascript">
+
+var project_name = '';
+
+    var queryString = new Array();
+    $(function () {
+        if (queryString.length == 0) {
+            if (window.location.search.split('?').length > 1) {
+                var params = window.location.search.split('?')[1].split('&');
+                for (var i = 0; i < params.length; i++) {
+                    var key = params[i].split('=')[0];
+                    var value = decodeURIComponent(params[i].split('=')[1]);
+                    queryString[key] = value;
+                }
+
+
+            }
+
+                console.log("data retrived");
+        }
+        if (queryString["name"] != null && queryString["technology"] != null) {
+            var data = "<u>Values from QueryString</u><br /><br />";
+            data += "<b>Name:</b> " + queryString["name"];
+            $("#lblData").html(data);
+
+        }
+
+
+    });
+
+
+  $(document).ready(function(){
+    var project_name = queryString["name"];
+
+
+$( "#slider_inner" ).load( "test.html #" + project_name );
+
+
+   });
+
+   </script> -->
+   <script>
+
+
+   function copy_caption () {
+
+
+
+     var captiontext = $('.active').children('.hide_caption').html();
+     console.log('this is next' + captiontext);
+
+ $('.fixed_caption').text(captiontext);
+
+
+
+
+   };
+
+function total_slides () {
+
+  var slides_count = $(".slider_inner .slide").length;
+console.log('count of slides' + slides_count);
+
+// $('#parent .child').click(function() {
+    var slides_index = $('.slider_inner .active').index();
+    var slides_index = slides_index + 1;
+// });
+console.log('index' + slides_index);
+
+ $('.slide_number').text(slides_index + '/' + slides_count);
+
+
+};
+
+// total_slides();
+
+function introslide () {
+
+if ($( "#intro_slide" ).hasClass( "active" )) {
+  console.log("introslide active");
+
+
+  $('body').css({'background-image' : 'linear-gradient(0deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.6) 100%), url(img/proj/apple/2.jpg)', 'background-size' : 'cover', 'background-position' : '50% 50%' });
+      $('body').addClass('animate__fadeIn');
+      $('body').removeClass('animate__fadeOut');
+  $('.navbar-brand, .navbar-light, .navbar-nav, .nav-link').css({'color': 'white'});
+    $(".slide.active img").css({ "display": 'none'});
+    $(".footer_desc").css({ "display": 'none'});
+
+}
+else {
+  $('body').css({background : 'white'});
+  $('body').removeClass('animate__fadeIn');
+    $('body').removeClass('animate__fadeOut');
+
+  $('.navbar-brand, .navbar-light, .navbar-nav, .nav-link').css({'color': 'rgba(0,0,0,0.9)'});
+  $(".slide.active img").css({ "display": 'block'});
+  $(".footer_desc").css({ "display": 'block'});
+
+}
+
+};
+
+
+
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+
+
+$("body").keydown(function(e) {
+  if(e.keyCode == 37) { // left
+
+                 $(".prev_button").trigger("click")
+  }
+  else if(e.keyCode == 39) { // right
+   $(".next_button").trigger("click")
+  }
+});
+
+
+</script>
