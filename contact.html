@@ -26,6 +26,8 @@ crossorigin="anonymous"></script>
   .map_img {
     max-width:100%;
   }
+
+
   </style>
 
   <script>
@@ -52,8 +54,10 @@ crossorigin="anonymous"></script>
 
 <body>
 
+    <div class="nav_overlay"></div>
 
-  	<nav class="navbar navbar-expand-lg sticky-top navbar-light  bg-white align-items-start  " style="">
+
+  	<nav class="navbar navbar-expand-lg fixed-top navbar-light  bg-white align-items-start  " style="">
   		<div class="container-fluid px-2 ">
   			<a href="index.html" class="navbar-brand logo-sc">Studio Chintala</a>
   			<div class="search_mobile_wrapper py-3 px-2" style="margin-bottom:0px; display:none; text-align:left; position:fixed; top:0px; left:0px; background-color:white; width:100%; z-index:5000;">
@@ -62,7 +66,11 @@ crossorigin="anonymous"></script>
 
 
   			<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-  				<span class="navbar-toggler-icon"></span>
+
+                      <div class="btn-line"></div>
+                        <div class="btn-line"></div>
+                        <div class="btn-line"></div>
+
   			</button>
   			<div class="  collapse navbar-collapse " id="navbarCollapse">
   				<ul class="navbar-nav d-flex  justify-content-between ms-auto">
@@ -76,7 +84,7 @@ crossorigin="anonymous"></script>
      	<a href="contact.html" class=" nav-link active ">Contact</a>
      </li>
   			<li class="nav-item">
-  					<a class="nav-link	search_b_big text-white" id="search_b" >Search</a>
+  					<a class="nav-link	search_b_big " id="search_b" >Search</a>
   </li>
 
   				</ul>
@@ -120,10 +128,10 @@ crossorigin="anonymous"></script>
     </div>
   </nav> -->
 
-  <div class="container-fluid p-lg-5 p-md-4 p-1 contact_content d-flex flex-column justify-content-between ">
+  <div class="container-fluid p-lg-5 p-md-4 contact_content d-flex flex-column justify-content-between">
 
 
-    <div class="  d-flex py-4 row mb-auto">
+    <div class="  d-flex px-2 py-4 row mb-auto">
 
       <div class = "col-12  mb-4 col-md-3 col-sm-6 col-lg-2  place me-5">
         <div class = "map">
@@ -195,7 +203,7 @@ Emeryville, California,</br> 94608
 
       </div>
 
-      <div class="flex-column py-4 " style=" vertical-align: bottom ">
+      <div class="flex-column py-4 px-2" style=" vertical-align: bottom ">
 
 
         <p class="contact_desc py-1">

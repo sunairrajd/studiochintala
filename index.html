@@ -215,7 +215,7 @@ $('#video_sc').trigger('play');
                 <p class="pb-2 px-2">Design is problem solving, the process of finding the simplest and the most logical solutions.</br>
                   Beauty is the by-product of the inherent simplicity and honesty of the design.
                   </p>
-                  <a href="process.html" class="pb-2 px-2 home_link">More</a>
+                  <a  class="pb-2 px-2 home_link">More</a>
                 </div>
                 </div>
 </body>
@@ -223,7 +223,13 @@ $('#video_sc').trigger('play');
 
 <script>
 
+$('.home_link').click(function() {
+$(".navbar-toggler").trigger("click");
+$(".navbar-brand").toggleClass("text-black");
+$(".nav_overlay").toggleClass("d-block");
 
+      $(".btn-line").toggleClass("open");
+});
 
 
 $('#mute').click(function() {

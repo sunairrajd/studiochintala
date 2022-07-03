@@ -20,11 +20,13 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 
 
-<body>
+<body class=" animate__animated">
+
+    <div class="nav_overlay"></div>
 
   <nav class="navbar navbar-expand-lg navbar-light  bg-transparent align-items-start  " style="">
     <div class="container-fluid px-2 ">
@@ -35,7 +37,11 @@
 
 
       <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
+
+                    <div class="btn-line"></div>
+                      <div class="btn-line"></div>
+                      <div class="btn-line"></div>
+
       </button>
       <div class="  collapse navbar-collapse " id="navbarCollapse">
         <ul class="navbar-nav d-flex  justify-content-between ms-auto">
@@ -52,7 +58,7 @@
 
 
       <li class="nav-item">
-          <a class="nav-link	search_b_big text-white" id="search_b" style="opacity: 0;">Search</a>
+          <a class="nav-link	search_b_big " id="search_b" style="">Search</a>
 </li>
 
         </ul>
@@ -105,10 +111,11 @@
     </div>
 
 <div class = "slider-outer ">
+  <a href="projects.html" class="back_button" style=" font-size:14px; text-decoration: none; color:black; position:absolute; right:0px; padding-right:2%; padding-left:2%; ">X</a>
 
   <div class="slider_inner" id="slider_inner">
 
-    <div class ="slide intro_slide animate__animated animate__fadeInLeft active  " id="intro_slide">
+    <div class ="slide  animate__animated intro_slide active  " id="intro_slide">
 <img src ="img/slide/1.jpeg" />
 
 
@@ -122,17 +129,17 @@ Bengaluru</h6>
     </div>
 
 
-    <div class ="slide animate__animated ">
+    <div class ="slide  animate__animated">
     <img class="" src ="img/slide/1.jpeg" />
       <span class="hide_caption">office</span>
     </div>
 
-    <div class ="slide animate__animated " >
+    <div class ="slide  animate__animated" >
     <img class="" src ="img/slide/2.jpeg" />
       <span class="hide_caption">blue</span>
   </div>
 
-    <div class ="slide animate__animated" >
+    <div class ="slide animate__animated " >
     <img class="" src ="img/slide/3.jpeg" />
     <span class="hide_caption">wyello</span>
   </div>
@@ -143,7 +150,7 @@ Bengaluru</h6>
   </div>
 
     </div>
-<!-- <p style=" position:absolute; top:0px; right:0px; ">close</p> -->
+
 
 
   </div>
@@ -159,6 +166,7 @@ Bengaluru</h6>
     <span class="   prev_footer px-2 px-md-4">  <i class=" px-1 bi bi-arrow-left  " style=""></i>Previous</span>
     <span class="  next_footer px-2 px-md-4">Next<i class=" px-1 bi bi-arrow-right" style=""></i> </span>
 </div>
+<div class="break-column"></div>
       <span class="py-2 ms-auto fixed_caption"></span></div>
 
     </div>
@@ -183,7 +191,7 @@ Bengaluru</h6>
 
 .prev_footer:hover, .next_footer:hover {
   color:rgba(0,0,0,0.9);
-  text-decoration: underline;
+  text-decoration: none;
 }
 .desc_outer {
   padding-left:8px;
@@ -202,7 +210,9 @@ Bengaluru</h6>
   padding-right:8px;
 }
 
-
+.fixed-caption {
+text-align:right;
+}
 .hide_caption {
   display: none;
 }
@@ -254,18 +264,31 @@ Bengaluru</h6>
 
 height:100%;
   max-width:100%;
-  display:none;
+  opacity:0;
+  /* display:block; */
 
   margin: 0 auto;
 
- position:relative;
+ /* position:relative; */
+ position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
 
 
- transition-property: opacity;
+ /* transition-property: opacity;
  transition-duration: 4s;
  transition-delay: 2s;
-  transition-timing-function: ease-in;
+  transition-timing-function: ease-in; */
 
+
+  }
+
+  .slide.active  {
+
+    opacity:1;
 
   }
 
@@ -274,7 +297,8 @@ height:100%;
 position:relative;
 margin:0 auto;
 width:100%;
-display:block;
+
+
   }
 
 .intro_slide_title, .intro_slide_desc {
@@ -347,7 +371,8 @@ display:block;
 
   .slide.active {
 
-
+    /* transition : opacity 6s ease-in !important;
+      -webkit-transition : opacity 6s ease-in !important; */
   display:block;
 
   }
@@ -400,19 +425,34 @@ display:block;
     var currentSlide =  $('.active');
     var nextSlide = currentSlide.next();
 
-    // var captiontext = nextcaption.find(".headline").html();
+
+//     if(nextSlide.length) {
+//
+// currentSlide.addClass('animate__fadeOut');
+//             currentSlide.removeClass('active animate__fadeIn').css({"z-index": -10, "display":"none"});
+//
+//               nextSlide.removeClass('animate__fadeOut');
+//               nextSlide.addClass('active animate__fadeIn').css({"z-index": +10, "display":"block"});
+//     }
+//     else {
+//       currentSlide.removeClass('active animate__fadeOut').css({"z-index": -10, "display":"none"});
+//       $('.slide').first().addClass('active animate__fadeIn').css({"z-index": +10,"display":"block"});
+//     }
+
 
     if(nextSlide.length) {
 
+currentSlide.addClass('animate__fadeOut');
+            currentSlide.removeClass('active animate__fadeIn').css({"z-index": -10, "opacity":"0"});
 
-      currentSlide.removeClass('active animate__slideInRight').css({"z-index": -10, "opacity": 0});
-        nextSlide.addClass('active animate__slideInRight').css({"z-index": +10, "opacity": 1});
+              nextSlide.removeClass('animate__fadeOut');
+              nextSlide.addClass('active animate__fadeIn').css({"z-index": +10, "opacity":"1"});
     }
-
     else {
-      currentSlide.removeClass('active').css({"z-index": -10, "opacity": 0});
-      $('.slide').first().addClass('active').css({"z-index": +10, "opacity": 1});
-
+      currentSlide.addClass('animate__fadeOut');
+      currentSlide.removeClass('active animate__fadeIn').css({"z-index": -10, "opacity":"0"});
+      $('.slide').first().removeClass('animate__fadeOut');
+      $('.slide').first().addClass('active animate__fadeIn').css({"z-index": +10,"opacity":"1"});
     }
 
     resize_portfolio();
@@ -424,7 +464,7 @@ display:block;
     });
 
 
-    $('.prev_button, .prev_footer').on('click', function(){
+    $('.prev_button, .prev_footer').on('click', function prevb(){
 
 
 
@@ -434,17 +474,20 @@ display:block;
     if(prevSlide.length) {
 
           // prevSlide.addClass('animate__fadeInLeft');
-      currentSlide.removeClass('active animate__slideInLeft').css({"z-index": -10, "opacity": 0});
-
-        prevSlide.addClass('active animate__slideInLeft').css({"z-index": +10, "opacity": 1});
+            currentSlide.addClass('animate__fadeOut');
+      currentSlide.removeClass('active animate__fadeIn').css({"z-index": -10, "opacity":"0"});
+    prevSlide.removeClass('animate__fadeOut');
+        prevSlide.addClass('active  animate__fadeIn').css({"z-index": +10, "opacity":"1" });
         // prevSlide.addClass('animate__fadeInRight');
 
     }
 
     else {
       // currentSlide.removeClass('animate__fadeOutRight');
-      currentSlide.removeClass('animate__fadeInLeft active').css({"z-index": -10, "opacity": 0});
-      $(".slide").last().addClass('animate__fadeInLeft active').css({"z-index": +10, "opacity": 1});
+        currentSlide.addClass('animate__fadeOut');
+      currentSlide.removeClass('active animate__fadeIn').css({"z-index": -10, "opacity":"0"});
+        $('.slide').last().removeClass('animate__fadeOut');
+      $(".slide").last().addClass(' active animate__fadeIn').css({"z-index": +10, "opacity":"1"});
     }
 
 
@@ -508,9 +551,9 @@ console.log('slider_height' + slider_container_height_px);
 
     if(image_w_ratio >= 1) {
       //landscape
-      $(".slide img").css({ "top": 0});
+      $(".slide.active img").css({ "top": 0});
 
-  $(".slide img").css({"width": '100%', "height": 'auto'});
+  $(".slide.active img").css({"width": '100%', "height": 'auto'});
 
 
     var final_image_width = slider_container_height * image_w_ratio;
@@ -518,7 +561,7 @@ console.log('slider_height' + slider_container_height_px);
     console.log('image_container_width - ' + final_image_width);
 
     if (final_image_width < slider_container_width) {
-        $(".slide img").css({ "top": 0});
+        $(".slide.active img").css({ "top": 0});
       $(".active img").css({"width": final_image_width + "px"});
 
     }
@@ -555,7 +598,7 @@ console.log('top space////////' + top_space);
       console.log('image_container_height /////' + image_container_height);
       console.log('top space////////' + top_space);
 
-    $(".slide img").css({"height": 'auto', "width": '100%'});
+    $(".slide.active img").css({"height": 'auto', "width": '100%'});
   console.log("bahar nkal rha h");
 
     }
@@ -563,7 +606,7 @@ console.log('top space////////' + top_space);
     else if(image_w_ratio < 1  && slider_container_width >= expected_image_width_in_p) {
       //portrait
 
-  $(".slide img").css({"height": '100%', "width": 'auto'});
+  $(".slide.active img").css({"height": '100%', "width": 'auto'});
     console.log("andhar h");
 
     }
@@ -656,15 +699,20 @@ if ($( "#intro_slide" ).hasClass( "active" )) {
 
 
   $('body').css({'background-image' : 'linear-gradient(0deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.6) 100%), url(img/slide/2.jpeg)', 'background-size' : 'cover', 'background-position' : '50% 50%' });
+      $('body').addClass('animate__fadeIn');
+      $('body').removeClass('animate__fadeOut');
   $('.navbar-brand, .navbar-light, .navbar-nav, .nav-link').css({'color': 'white'});
-    $(".slide img").css({ "display": 'none'});
+    $(".slide.active img").css({ "display": 'none'});
     $(".footer_desc").css({ "display": 'none'});
 
 }
 else {
   $('body').css({background : 'white'});
+  $('body').removeClass('animate__fadeIn');
+    $('body').removeClass('animate__fadeOut');
+
   $('.navbar-brand, .navbar-light, .navbar-nav, .nav-link').css({'color': 'rgba(0,0,0,0.9)'});
-  $(".slide img").css({ "display": 'block'});
+  $(".slide.active img").css({ "display": 'block'});
   $(".footer_desc").css({ "display": 'block'});
 
 }
@@ -679,6 +727,16 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
+
+$("body").keydown(function(e) {
+  if(e.keyCode == 37) { // left
+
+                 $(".prev_button").trigger("click")
+  }
+  else if(e.keyCode == 39) { // right
+   $(".next_button").trigger("click")
+  }
+});
 
 
 </script>

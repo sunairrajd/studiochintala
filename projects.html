@@ -3,9 +3,10 @@
 <!DOCTYPE html>
  <title>Studio Chintala | Projects</title>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.slim.js"
-integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
-crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -14,6 +15,8 @@ crossorigin="anonymous"></script>
 
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <link rel="stylesheet" href="css/style.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 <script src = "js/script.js"></script>
 <script>
 
@@ -130,7 +133,11 @@ $(document).ready(function () {
 
 	<i id="search_b_mob" class="search_b_mobile bi bi-search" style="font-size:24px; "></i>
 			<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-				<span class="navbar-toggler-icon"></span>
+
+                    <div class="btn-line"></div>
+                      <div class="btn-line"></div>
+                      <div class="btn-line"></div>
+
 			</button>
 			<div class="  collapse navbar-collapse " id="navbarCollapse">
 				<ul class="navbar-nav d-flex  justify-content-between ms-auto">
@@ -139,13 +146,13 @@ $(document).ready(function () {
 
 <div class="d-none d-lg-flex flex-column bg-white px-2 filters_list" style="position:absolute;">
 
-	<a class="filter_list flex-item sub-nav active" data-filter = "all">Selected</a>
+	<a class="filter_list flex-item sub-nav active" data-filter = "all">All Work</a>
 	<a class="filter_list flex-item sub-nav " data-filter = "architecture">Architecture</a>
 	<a class="filter_list flex-item sub-nav " data-filter = "objects">Objects</a>
 	<a class="filter_list flex-item sub-nav " data-filter = "interior">Interior</a>
 	<a class="filter_list flex-item sub-nav " data-filter = "branding">Branding</a>
 	<a class="filter_list flex-item sub-nav " data-filter = "research">Research</a>
-	<a class="filter_list flex-item sub-nav " href="archive.html">All</a>
+	<a class="filter_list flex-item sub-nav " href="archive.html">Project Index</a>
 </div>
 </li>
  <li class="nav-item">
@@ -160,7 +167,7 @@ $(document).ready(function () {
 				</ul>
 
 			</div>
-		<form class="nav-item nav-link search_bar " style="margin-bottom:0px; text-align:right;">	<input type="text" name="keyword" id="myInput" class="flex-item input-sm" placeholder="Search.." onblur="this.placeholder = 'Search" > <button id="clearbutton" class="clearbutton" type="button" value="close" onclick="this.form.reset();  mysearch(); myunmark(); $('.clearbutton').hide(); " style="border:0px;">  <span id="bb" ><i class="bi bi-x"></i></span></form>
+		<form class=" search_bar " style="margin-bottom:0px; text-align:right;">	<input type="text" name="keyword" id="myInput" class="flex-item input-sm" placeholder="Search.." onblur="this.placeholder = 'Search" > <button id="clearbutton" class="clearbutton" type="button" value="close" onclick="this.form.reset();  mysearch(); myunmark(); $('.clearbutton').hide(); " style="border:0px;">  <span id="bb" ><i class="bi bi-x"></i></span></form>
 
 </div>
 
@@ -169,27 +176,20 @@ $(document).ready(function () {
 
   <body>
 
+      <div class="nav_overlay"></div>
+
 
 
 <style>
 
-	.search_bar {
-display:none;
-		position:absolute;
-		z-index:500;
-		right:0px;
-		padding:2%;
-		background-color:white;
-	}
+
 		.search_b_mobile {
 			display:none;
 		}
 
 
-		.search_b_big{
-				display:block;
 
-		}
+
 
 
 	#clearbutton {
@@ -211,9 +211,7 @@ display:none;
 										display:block;
 									}
 
-									.search_b_big{
-										display:none;
-									}
+
 .filters_list{
 
   display:none;
@@ -224,15 +222,7 @@ display:none;
 										width:100%;
 									}
 
-								.search_bar {
-									display:none;
 
-									position:absolute;
-									top:0px;
-									left:0px;
-									z-index:5000;
-
-								}
 
 								}
 
@@ -336,14 +326,14 @@ display:none;
 
 
 
-			<div class = "ud mysqr col-12 col-sm-4  col-md-3 col-lg-2"  style="">
+			<div class = "ud mysqr col-12 animate__animated col-sm-4  col-md-3 col-lg-2"  style="">
 <div class ="projectb" id="scoffice">
 				<img class="ud width" src="img/thumb/bench.png"/>
 <div class="project_name " id="projectname">Studio Chintala Office</div>
 </div>
 			</div>
 
-				<div class = "interior mysqr col-12  col-sm-4 col-md-3  col-lg-2 "  style=" ">
+				<div class = "interior mysqr col-12 animate__animated  col-sm-4 col-md-3  col-lg-2 "  style=" ">
 <div class ="projecta">
 					<img class="height"  src="img/thumb/light.png"/>
 					<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
@@ -352,7 +342,7 @@ display:none;
 			  </div>
 				</div>
 
-					<div class = "branding ud mysqr col-12   col-sm-4 col-md-3 col-lg-2"  style="">
+					<div class = "branding ud mysqr col-12 animate__animated   col-sm-4 col-md-3 col-lg-2"  style="">
 						<div class ="projecta">
 						<img class="height"  src="img/thumb/5.png"/>
 						<div class="project_name " ><span class="strong">Studio Chintala Office</span></br>
@@ -360,7 +350,7 @@ display:none;
 </div>
 					</div>
 
-					<div class = "ud mysqr col-12 col-sm-4 col-md-3   col-lg-2"  style="">
+					<div class = "ud mysqr col-12 animate__animated col-sm-4 col-md-3   col-lg-2"  style="">
 						<div class ="projectb">
 						<img class="width"  src="img/thumb/6.png"/>
 						<div class="project_name " ><span class="strong">Studio Chintala Office</span></br>
@@ -371,7 +361,7 @@ display:none;
 
 
 
-							<div class = "objects architecture mysqr col-12 col-sm-4 col-md-3   col-lg-2"  style="">
+							<div class = "objects architecture mysqr col-12 animate__animated col-sm-4 col-md-3   col-lg-2"  style="">
 								<div class ="projecta">
 								<img class="height"  src="img/thumb/7p.png"/>
 								<div class="project_name "><span class="strong">Bench Office</span></br>
@@ -379,7 +369,7 @@ display:none;
 								</div>
 
 						</div>
-								<div class = "objects mysqr col-12 col-sm-4 col-md-3  col-lg-2"  style=" ">
+								<div class = "objects mysqr col-12 animate__animated col-sm-4 col-md-3  col-lg-2"  style=" ">
 									<div class ="projectb">
 									<img class="width" src="img/thumb/3.png"/>
 									<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
@@ -387,14 +377,14 @@ display:none;
 								</div>
 								</div>
 
-									<div class = "objects mysqr col-12 col-sm-4 col-md-3  col-lg-2"  style="">
+									<div class = "objects mysqr col-12 animate__animated col-sm-4 col-md-3  col-lg-2"  style="">
 										<div class ="projecta">
 										<img class="height"  src="img/thumb/4.png"/>
 										<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
 										<span>Bengaluru</span></div>
 										</div></div>
 
-										<div class = "research mysqr col-12 col-sm-4 col-md-3   col-lg-2"  style="">
+										<div class = "research mysqr col-12 animate__animated col-sm-4 col-md-3   col-lg-2"  style="">
 											<div class ="projectb">
 											<img class="width"  src="img/thumb/3.png"/>
 											<div class="project_name "><span class="strong">research Office</span></br>
@@ -402,7 +392,7 @@ display:none;
 										</div>
 										</div>
 
-										<div class = "objects architecture mysqr col-12 col-sm-4 col-md-3   col-lg-2"  style="">
+										<div class = "objects architecture mysqr col-12 animate__animated col-sm-4 col-md-3   col-lg-2"  style="">
 											<div class ="projecta">
 											<img class="height"  src="img/thumb/7p.png"/>
 											<div class="project_name "><span class="strong">Bench Office</span></br>
@@ -411,7 +401,7 @@ display:none;
 
 									</div>
 
-									<div class = "objects mysqr col-12 col-sm-4 col-md-3  col-lg-2"  style=" ">
+									<div class = "objects mysqr col-12 animate__animated col-sm-4 col-md-3  col-lg-2"  style=" ">
 										<div class ="projectb">
 										<img class="width" src="img/thumb/3.png"/>
 										<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
@@ -419,14 +409,14 @@ display:none;
 									</div>
 									</div>
 
-										<div class = "objects mysqr col-12 col-sm-4 col-md-3  col-lg-2"  style="">
+										<div class = "objects mysqr col-12 animate__animated col-sm-4 col-md-3  col-lg-2"  style="">
 											<div class ="projecta">
 											<img class="height"  src="img/thumb/4.png"/>
 											<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
 											<span>Bengaluru</span></div>
 											</div></div>
 
-											<div class = "research mysqr col-12 col-sm-4 col-md-3   col-lg-2"  style="">
+											<div class = "research mysqr col-12 animate__animated col-sm-4 col-md-3   col-lg-2"  style="">
 												<div class ="projectb">
 												<img class="width"  src="img/thumb/3.png"/>
 												<div class="project_name "><span class="strong">research Office</span></br>
@@ -434,7 +424,7 @@ display:none;
 											</div>
 											</div>
 
-											<div class = "objects architecture mysqr col-12 col-sm-4 col-md-3   col-lg-2"  style="">
+											<div class = "objects architecture mysqr col-12 animate__animated col-sm-4 col-md-3   col-lg-2"  style="">
 												<div class ="projecta">
 												<img class="height"  src="img/thumb/7p.png"/>
 												<div class="project_name "><span class="strong">Bench Office</span></br>
@@ -442,7 +432,7 @@ display:none;
 												</div>
 
 												</div>
-											<div class = "objects mysqr col-12 col-sm-4 col-md-3  col-lg-2"  style=" ">
+											<div class = "objects mysqr col-12 animate__animated col-sm-4 col-md-3  col-lg-2"  style=" ">
 												<div class ="projectb">
 												<img class="width" src="img/thumb/3.png"/>
 												<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
@@ -450,7 +440,7 @@ display:none;
 											</div>
 											</div>
 
-												<div class = "objects mysqr col-12 col-sm-4 col-md-3  col-lg-2"  style="">
+												<div class = "objects mysqr col-12 animate__animated col-sm-4 col-md-3  col-lg-2"  style="">
 													<div class ="projecta">
 													<img class="height"  src="img/thumb/4.png"/>
 													<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
@@ -461,7 +451,7 @@ display:none;
 
 
 
-													<div class = "objects architecture mysqr col-12 col-sm-4 col-md-3   col-lg-2"  style="">
+													<div class = "objects architecture mysqr col-12 animate__animated col-sm-4 col-md-3   col-lg-2"  style="">
 														<div class ="projecta">
 														<img class="height"  src="img/thumb/7p.png"/>
 														<div class="project_name "><span class="strong">Bench Office</span></br>
@@ -471,14 +461,14 @@ display:none;
 												</div>
 
 
-															<div class = "objects mysqr col-12 col-sm-4 col-md-3  col-lg-2"  style="">
+															<div class = "objects mysqr col-12 animate__animated col-sm-4 col-md-3  col-lg-2"  style="">
 																<div class ="projecta">
 																<img class="height"  src="img/thumb/4.png"/>
 																<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
 																<span>Bengaluru</span></div>
 																</div></div>
 
-																<div class = "research mysqr col-12 col-sm-4 col-md-3   col-lg-2"  style="">
+																<div class = "research mysqr col-12 animate__animated col-sm-4 col-md-3   col-lg-2"  style="">
 																	<div class ="projectb">
 																	<img class="width"  src="img/thumb/3.png"/>
 																	<div class="project_name "><span class="strong">research Office</span></br>
@@ -494,14 +484,14 @@ display:none;
 
 
 
-<div class = "ud mysqr col-12 col-sm-4  col-md-3 col-lg-2"  style="">
+<div class = "ud mysqr col-12 animate__animated col-sm-4  col-md-3 col-lg-2"  style="">
 <div class ="projectb">
 	<img class="ud width" src="img/thumb/bench.png"/>
 <div class="project_name " id="projectname">Studio Chintala Office</div>
 </div>
 </div>
 
-	<div class = "interior mysqr col-12  col-sm-4 col-md-3  col-lg-2 "  style=" ">
+	<div class = "interior mysqr col-12 animate__animated  col-sm-4 col-md-3  col-lg-2 "  style=" ">
 <div class ="projecta">
 		<img class="height"  src="img/thumb/light.png"/>
 		<div class="project_name "><span class="strong">bencheee</span></br>
@@ -510,7 +500,7 @@ display:none;
 	</div>
 	</div>
 
-		<div class = "branding ud mysqr col-12   col-sm-4 col-md-3 col-lg-2"  style="">
+		<div class = "branding ud mysqr col-12 animate__animated   col-sm-4 col-md-3 col-lg-2"  style="">
 			<div class ="projecta">
 			<img class="height"  src="img/thumb/5.png"/>
 			<div class="project_name " ><span class="strong">Studio Chintala Office</span></br>
@@ -518,7 +508,7 @@ display:none;
 </div>
 		</div>
 
-		<div class = "ud mysqr col-12 col-sm-4 col-md-3   col-lg-2"  style="">
+		<div class = "ud mysqr col-12 animate__animated col-sm-4 col-md-3   col-lg-2"  style="">
 			<div class ="projectb">
 			<img class="width"  src="img/thumb/6.png"/>
 			<div class="project_name " ><span class="strong">Studio Chintala Office</span></br>
@@ -529,7 +519,7 @@ display:none;
 
 
 
-				<div class = "architecture mysqr col-12 col-sm-4 col-md-3   col-lg-2"  style="">
+				<div class = "architecture mysqr col-12 animate__animated col-sm-4 col-md-3   col-lg-2"  style="">
 					<div class ="projecta">
 					<img class="height"  src="img/thumb/7p.png"/>
 					<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
@@ -537,7 +527,7 @@ display:none;
 					</div>
 
 			</div>
-					<div class = "objects mysqr col-12 col-sm-4 col-md-3  col-lg-2"  style=" ">
+					<div class = "objects mysqr col-12 animate__animated col-sm-4 col-md-3  col-lg-2"  style=" ">
 						<div class ="projectb">
 						<img class="width" src="img/thumb/3.png"/>
 						<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
@@ -545,14 +535,14 @@ display:none;
 					</div>
 					</div>
 
-						<div class = "objects mysqr col-12 col-sm-4 col-md-3  col-lg-2"  style="">
+						<div class = "objects mysqr col-12 animate__animated col-sm-4 col-md-3  col-lg-2"  style="">
 							<div class ="projecta">
 							<img class="height"  src="img/thumb/4.png"/>
 							<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
 							<span>Bengaluru</span></div>
 							</div></div>
 
-							<div class = "research mysqr col-12 col-sm-4 col-md-3   col-lg-2"  style="">
+							<div class = "research mysqr col-12 animate__animated col-sm-4 col-md-3   col-lg-2"  style="">
 								<div class ="projectb">
 								<img class="width"  src="img/thumb/3.png"/>
 								<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
@@ -562,14 +552,14 @@ display:none;
 
 
 
-							<div class = "ud mysqr col-12 col-sm-4  col-md-3 col-lg-2"  style="">
+							<div class = "ud mysqr col-12 animate__animated col-sm-4  col-md-3 col-lg-2"  style="">
 				<div class ="projectb">
 								<img class="ud width" src="img/thumb/bench.png"/>
 				<div class="project_name " id="projectname">Studio Chintala Office</div>
 				</div>
 							</div>
 
-								<div class = "interior mysqr col-12  col-sm-4 col-md-3  col-lg-2 "  style=" ">
+								<div class = "interior mysqr col-12 animate__animated  col-sm-4 col-md-3  col-lg-2 "  style=" ">
 				<div class ="projecta">
 									<img class="height"  src="img/thumb/light.png"/>
 									<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
@@ -578,7 +568,7 @@ display:none;
 								</div>
 								</div>
 
-									<div class = "branding ud mysqr col-12   col-sm-4 col-md-3 col-lg-2"  style="">
+									<div class = "branding ud mysqr col-12 animate__animated   col-sm-4 col-md-3 col-lg-2"  style="">
 										<div class ="projecta">
 										<img class="height"  src="img/thumb/5.png"/>
 										<div class="project_name " ><span class="strong">Studio Chintala Office</span></br>
@@ -586,7 +576,7 @@ display:none;
 				</div>
 									</div>
 
-									<div class = "ud mysqr col-12 col-sm-4 col-md-3   col-lg-2"  style="">
+									<div class = "ud mysqr col-12 animate__animated col-sm-4 col-md-3   col-lg-2"  style="">
 										<div class ="projectb">
 										<img class="width"  src="img/thumb/6.png"/>
 										<div class="project_name " ><span class="strong">Studio Chintala Office</span></br>
@@ -597,7 +587,7 @@ display:none;
 
 
 
-											<div class = "architecture mysqr col-12 col-sm-4 col-md-3   col-lg-2"  style="">
+											<div class = "architecture mysqr col-12 animate__animated col-sm-4 col-md-3   col-lg-2"  style="">
 												<div class ="projecta">
 												<img class="height"  src="img/thumb/7p.png"/>
 												<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
@@ -605,7 +595,7 @@ display:none;
 												</div>
 
 										</div>
-												<div class = "objects mysqr col-12 col-sm-4 col-md-3  col-lg-2"  style=" ">
+												<div class = "objects mysqr col-12 animate__animated col-sm-4 col-md-3  col-lg-2"  style=" ">
 													<div class ="projectb">
 													<img class="width" src="img/thumb/3.png"/>
 													<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
@@ -613,14 +603,14 @@ display:none;
 												</div>
 												</div>
 
-													<div class = "objects mysqr col-12 col-sm-4 col-md-3  col-lg-2"  style="">
+													<div class = "objects mysqr col-12 animate__animated col-sm-4 col-md-3  col-lg-2"  style="">
 														<div class ="projecta">
 														<img class="height"  src="img/thumb/4.png"/>
 														<div class="project_name "><span class="strong">Studio Chintala Office</span></br>
 														<span>Bengaluru</span></div>
 														</div></div>
 
-														<div class = "research mysqr col-12 col-sm-4 col-md-3   col-lg-2"  style="">
+														<div class = "research mysqr col-12 animate__animated col-sm-4 col-md-3   col-lg-2"  style="">
 															<div class ="projectb">
 															<img class="width"  src="img/thumb/3.png"/>
 															<div class="project_name "><span class="strong">research 1</span></br>
@@ -632,6 +622,8 @@ display:none;
 
 																								</div>
 																							</div>
+                                              	<div class = "container-fluid px-2 pb-4" style="margin-top:120px;">
+                                                </div>
 
 
 																							<div class="top_nav">
@@ -644,13 +636,13 @@ display:none;
 
 																								<div class="d-flex flex-row justify-content-between bg-white px-2 py-3" style="">
 
-																									<a class="filter_list flex-item sub-nav  active" data-filter = "all">All</a>
+																									<a class="filter_list flex-item sub-nav  active" data-filter = "all">Work</a>
 																									<a class="filter_list flex-item sub-nav  " data-filter = "architecture">Architecture</a>
 																									<a class="filter_list flex-item sub-nav " data-filter = "objects">Objects</a>
-																									<a class="filter_list flex-item sub-nav " data-filter = "interior">Interior</a>
+																									<a class="filter_list flex-item sub-nav " data-filter = "interior">Interiors</a>
 																									<a class="filter_list flex-item sub-nav " data-filter = "branding">Branding</a>
 																									<a class="filter_list flex-item sub-nav " data-filter = "research">Research</a>
-																									<a class="filter_list flex-item sub-nav " href="archive.html">Archive</a>
+																									<a class="filter_list flex-item sub-nav " href="archive.html">Index</a>
 
 																								</div>
 																								</div>
@@ -695,7 +687,14 @@ padding:2%;
 				var keyword = $("input[name='keyword']").val();
 
 				// Determine selected options
-				var options = {};
+				var options = {
+
+          "accuracy": {
+        "value": "partially",
+        "limiters": [",", "."]
+    }
+
+        };
 				$("input[name='opt[]']").each(function() {
 					options[$(this).val()] = $(this).is(":checked");
 				});
@@ -751,11 +750,19 @@ padding:2%;
 																									$(this).addClass('active').siblings().removeClass('active');
 																									tag = $(this).attr('data-filter');
 																									if (tag ==  'all') {
-																										projects.show('1000');
+																										projects.fadeIn("slow", function () {$(this).show();});
 																									}
 																									else {
-																										projects.not('.'+tag).hide('300');
-																										projects.filter('.'+tag).show('400');
+
+																										// projects.not('.'+tag).css({"display" : "none",   "-webkit-transition" : "opacity 6s ease-in-out" });
+
+                                                    // projects.not('.'+tag).removeClass("animate__fadeIn");
+                                                    // projects.not('.'+tag).addClass("animate__fadeOut");
+                                                        projects.not('.'+tag).fadeOut(400);;
+                                                    // projects.filter('.'+tag).removeClass("animate__fadeOut");
+                                                    // projects.filter('.'+tag).addClass("animate__fadeIn");
+                                                      projects.filter('.'+tag).fadeIn(100);
+																										// projects.filter('.'+tag).fadeIn("slow", function () {$(this).show();});
 																										}
 																									})
 																								});
