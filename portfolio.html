@@ -46,7 +46,7 @@
       <div class="  collapse navbar-collapse " id="navbarCollapse">
         <ul class="navbar-nav d-flex  justify-content-between ms-auto">
       <li class="nav-item">
-<a href ="projects.html" class="nav-link ">Work</a>
+<a href ="projects.html" class="nav-link active">Work</a>
 </li>
  <li class="nav-item">
     <a href="process.html" class=" nav-link ">Studio</a>
@@ -111,7 +111,7 @@
     </div>
 
 <div class = "slider-outer ">
-  <a href="projects.html" class="back_button" style=" font-size:14px; text-decoration: none; color:black; position:absolute; right:0px; padding-right:2%; padding-left:2%; ">X</a>
+  <a class="bi bi-x" href="projects.html" class="back_button" style=" font-size:28px; text-decoration: none; color:black; position:absolute; right:0px; padding-right:1.5%; padding-left:1.5%; "></a>
 
   <div class="slider_inner" id="slider_inner">
 
@@ -197,7 +197,7 @@ Bengaluru</h6>
   padding-left:8px;
   padding-right:8px;
   font-size: 14px;
-  color:rgba(0,0,0,0.9);
+  color:rgba(0,0,0,0.55);
 }
 
 .slider_container {
@@ -220,6 +220,7 @@ text-align:right;
 .footer_desc {
 
   padding:20px 2% 30px 2%;
+  z-index:5000;
 }
 
 
@@ -260,11 +261,16 @@ text-align:right;
 
   }
 
+  body {
+    overflow: hidden;
+  }
+
   .slide{
 
 height:100%;
   max-width:100%;
   opacity:0;
+  z-index:-10;
   /* display:block; */
 
   margin: 0 auto;
@@ -422,7 +428,7 @@ width:100%;
 
 
 
-    var currentSlide =  $('.active');
+    var currentSlide =  $('.slide.active');
     var nextSlide = currentSlide.next();
 
 
@@ -477,7 +483,7 @@ currentSlide.addClass('animate__fadeOut');
             currentSlide.addClass('animate__fadeOut');
       currentSlide.removeClass('active animate__fadeIn').css({"z-index": -10, "opacity":"0"});
     prevSlide.removeClass('animate__fadeOut');
-        prevSlide.addClass('active  animate__fadeIn').css({"z-index": +10, "opacity":"1" });
+        prevSlide.addClass('active  animate__fadeIn').css({"z-index": +10, "opacity":"1"});
         // prevSlide.addClass('animate__fadeInRight');
 
     }
@@ -711,7 +717,8 @@ else {
   $('body').removeClass('animate__fadeIn');
     $('body').removeClass('animate__fadeOut');
 
-  $('.navbar-brand, .navbar-light, .navbar-nav, .nav-link').css({'color': 'rgba(0,0,0,0.9)'});
+  $('.navbar-light, .navbar-nav, .nav-link').css({'color': 'rgba(0,0,0,0.55)'});
+  $(".navbar-brand, .nav-link.active").css({ "color": 'rgb(0,0,0,0.9)'});
   $(".slide.active img").css({ "display": 'block'});
   $(".footer_desc").css({ "display": 'block'});
 

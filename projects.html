@@ -127,7 +127,7 @@ $(document).ready(function () {
 		<div class="container-fluid px-2 ">
 			<a href="index.html" class="navbar-brand logo-sc">Studio Chintala</a>
 			<div class="search_mobile_wrapper py-3 px-2" style="margin-bottom:0px; display:none; text-align:left; position:fixed; top:0px; left:0px; background-color:white; width:100%; z-index:5000;">
-					<form class="search_mobile " >	<input type="text" name="keywordmobile" id="myInput_mobile" class="flex-item input-sm" placeholder="Search here" onblur="this.placeholder = 'Search" style=" width:100%;" > <button id="clearbutton" class="clearbutton" type="button" value="close" onclick="this.form.reset();  mysearch(); myunmark(); $('.clearbutton').hide(); " style="border:0px; width:100%;">  <span id="bb_m" > clear</span></form>
+					<form class="search_mobile " >	<input type="text" name="keywordmobile" id="myInput_mobile" class="flex-item input-sm" placeholder="" onblur="this.placeholder = "Search.." style=" width:100%;" > <button id="clearbutton" class="clearbutton" type="button" value="close" onclick="this.form.reset();  mysearch(); myunmark(); $('.clearbutton').hide();" style="border:0px; width:100%;" autofocus>   <span id="bb_m" > clear</span></form>
 	</div>
 
 
@@ -167,7 +167,7 @@ $(document).ready(function () {
 				</ul>
 
 			</div>
-		<form class=" search_bar " style="margin-bottom:0px; text-align:right;">	<input type="text" name="keyword" id="myInput" class="flex-item input-sm" placeholder="Search.." onblur="this.placeholder = 'Search" > <button id="clearbutton" class="clearbutton" type="button" value="close" onclick="this.form.reset();  mysearch(); myunmark(); $('.clearbutton').hide(); " style="border:0px;">  <span id="bb" ><i class="bi bi-x"></i></span></form>
+		<form class=" search_bar " style="margin-bottom:0px; text-align:right;">	<input type="text" name="keyword" id="myInput" class="flex-item input-sm" placeholder="" onblur="this.placeholder = '" > <button id="clearbutton" class="clearbutton" type="button" value="close" onclick="this.form.reset();  mysearch(); myunmark(); $('.clearbutton').hide(); " style="border:0px;">  <span id="bb" ><i class="bi bi-x"></i></span></form>
 
 </div>
 
@@ -198,8 +198,15 @@ $(document).ready(function () {
 
 
 	#myInput {
-		width:150px;
+		width:60px;
+    font-size:14px;
+
+    transition : opacity 1s ease-in-out !important;
+             color: #C4C4C4 !important;
+
+
 	}
+
 
 	#bb {
 
@@ -220,6 +227,7 @@ $(document).ready(function () {
 									#myInput {
 
 										width:100%;
+
 									}
 
 
